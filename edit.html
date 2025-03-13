@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Editar Alumno</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Editar Alumno</h1>
+    <form action="{{ url_for('edit_alumno', alumno_id=alumno.id) }}" method="POST" class="form-edit">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" value="{{ alumno.nombre }}" required>
+
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" name="apellido" value="{{ alumno.apellido }}" required>
+
+      <label for="direccion">Dirección:</label>
+      <input type="text" id="direccion" name="direccion" value="{{ alumno.direccion }}">
+
+      <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+      <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" value="{{ alumno.fecha_nacimiento }}">
+
+      <label for="carrera">Carrera:</label>
+      <input type="text" id="carrera" name="carrera" value="{{ alumno.carrera }}">
+
+      <label for="telefono">Teléfono:</label>
+      <input type="text" id="telefono" name="telefono" value="{{ alumno.telefono }}">
+
+      <div class="form-actions">
+        <button type="submit" class="btn">Guardar Cambios</button>
+        <a href="{{ url_for('cards') }}" class="btn btn-secondary">Cancelar</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

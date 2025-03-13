@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Alumnos (Cards)</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Alumnos</h1>
+    <a href="{{ url_for('add_alumno') }}" class="btn btn-add">Agregar Alumno</a>
+    
+    <div class="cards-container">
+      {% for alumno in alumnos %}
+      <div class="card">
+        <img class="card-img" 
+             src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/33451750-e97c-4439-8b15-4f84e86fabab/d42ty4e-4bc200b8-1a10-46b3-8227-33276b3076c6.png" 
+             alt="Imagen alumno">
+        <div class="card-body">
+          <h2 class="card-title">{{ alumno.nombre }} {{ alumno.apellido }}</h2>
+          <p class="card-text">
+            <strong>Carrera:</strong> {{ alumno.carrera }}<br>
+           
+          </p>
+          <div class="card-actions">
+            <a href="{{ url_for('edit_alumno', alumno_id=alumno.id) }}" class="btn">Editar</a>
+            <form action="{{ url_for('delete_alumno', alumno_id=alumno.id) }}" method="POST" class="inline-form">
+              <button type="submit" class="btn btn-danger" onclick="return confirm('¿Seguro que deseas eliminar?')">Eliminar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</body>
+</html>

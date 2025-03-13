@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Inicio</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Página de Inicio</h1>
+    <p>Este es un ejemplo de página principal. Haz clic para ver los alumnos en formato de tarjetas.</p>
+    <a href="{{ url_for('cards') }}" class="btn">Ver Alumnos</a>
+  </div>
+</body>
+</html>
