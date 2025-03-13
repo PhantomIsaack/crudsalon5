@@ -1,0 +1,109 @@
+/* main.css */
+
+/* General */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+h1 {
+  margin-top: 0;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Botones */
+.btn {
+  display: inline-block;
+  padding: 8px 12px;
+  background: #007BFF;
+  color: #fff;
+  border-radius: 4px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+
+.btn-secondary {
+  background: #6c757d;
+}
+
+.btn-secondary:hover {
+  background: #55595c;
+}
+
+.btn-danger {
+  background: #dc3545;
+}
+
+.btn-danger:hover {
+  background: #a71d2a;
+}
+
+.btn-add {
+  margin-bottom: 20px;
+}
+
+/* Cards */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  width: 300px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 15px;
+  flex: 1;
+}
+
+.card-title {
+  font-size: 1.2em;
+  margin: 0 0 10px 0;
+}
+
+.card-text {
+  font-size: 0.95em;
+  margin-bottom: 10px;
+}
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Formular
